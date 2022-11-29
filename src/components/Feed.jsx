@@ -19,6 +19,15 @@ export default function Feed() {
 
     return (
         <>
+            {reviewList.map(x=>(
+                <a key={x._id}
+            )
+                
+                )}
+            
+            
+            
+            
             <section>
                 {reviewList.map(review => {
                    return <CardReviews review={review} key={review._id}/>
