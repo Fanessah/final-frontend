@@ -3,36 +3,26 @@ import CardReviews from "./CardReviews"
 
 
 export default function Feed() {
-    const [reviewList, setReviewList] = useState()
+    const [reviewList, setReviewList] = useState([])
     const [showReview, setShowReview] = useState(false)
-    
+
     useEffect(() => {
-        fetch('http://localhost:3030/')
+        fetch('https://deploy-final-proj.web.app/')
             .then(results => results.json())
-            .then(data => setReviewList(data)) 
+            .then(data => setReviewList(data))
             .catch(err => console.error(err))
     }, [])
 
-    // console.log('----------->',reviewList)
-
-
+    console.log('----------->',reviewList)
 
     return (
-        <>
-            {reviewList.map(x=>(
-                <a key={x._id}
-            )
-                
-                )}
-            
-            
-            
-            
-            <section>
-                {reviewList.map(review => {
-                   return <CardReviews review={review} key={review._id}/>
-})}
-            </section>
-        </>
+        <section>
+            {reviewList.map((review, index) => {
+                return <CardReviews review={review} key={index} />
+            })}
+        </section>
     )
 }
+
+
+
