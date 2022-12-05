@@ -1,22 +1,31 @@
-import Header from './components/Header'
-import Footer from './components/Footer'
-import Feed from './components/Feed'
-// import Home from './pages/Home'
-import './App.css';
+// eslint-disable-next-line
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import CardReviews from "./components/CardReviews";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Feed from "./components/Feed";
+import Home from "./pages/Home";
+import "./App.css";
 
 function App() {
   return (
-    <main className="App">
-     
-       <Header/>
+    <div className="App">
+      <Router>x
+        <Header />
+      <Routes>
 
-        {/* <Home/> */}
+        <Route path='/' element={<Home />} />
+        <Route path="/allreviews" element={<Feed/>}/>
+        <Route path="/addreview" element={<CardReviews/>}/>
 
-        <Feed/>
 
-       <Footer/>
-      
-    </main>
+      </Routes>
+        <Feed />
+      </Router>
+
+        <Footer />
+    </div>
   );
 }
 

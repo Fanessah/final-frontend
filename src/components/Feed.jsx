@@ -4,10 +4,10 @@ import CardReviews from "./CardReviews"
 
 export default function Feed() {
     const [reviewList, setReviewList] = useState([])
-    const [showReview, setShowReview] = useState(false)
+
 
     useEffect(() => {
-        fetch('https://deploy-final-proj.web.app/')
+        fetch('https://deploy-final-proj.web.app/allreviews')
             .then(results => results.json())
             .then(data => setReviewList(data))
             .catch(err => console.error(err))
