@@ -3,7 +3,8 @@ export default function Header() {
         
         <ul>
         <li><a href="/">Home</a></li>
-        <li><a href="/allreviews">Feed</a></li>
+        <li><a href="/allreviews">My Reviews </a></li>
+        <li><a href="/addreview">Add a Review </a></li>
       </ul>
        
     )
