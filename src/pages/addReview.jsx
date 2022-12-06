@@ -1,8 +1,11 @@
 
 import React from 'react';
 import { Button, Form, Input, } from 'antd';
+import {useNavigate} from 'react-router-dom'
 
-export default function addReview() {
+export default function AddReview() {
+
+    const navigate = useNavigate();
 
     const onFinish = (index) => {
         console.log('success', index)
@@ -16,6 +19,8 @@ export default function addReview() {
         .then(response => response.json())
         .then(data => {
           console.log(data)
+          console.log(index)
+          navigate('/')
         })
          .catch(console.error)
       }
@@ -31,11 +36,11 @@ export default function addReview() {
           onFinish={onFinish}
           onFinishFailed={onFinishFailed}
           labelCol={{ span: 8 }}
-          wrapperCol={{ span: 16 }}
+          wrapperCol={{ span: 12 }}
           >
-            
+           
             <Form.Item
-              name='author' label='Author'>
+              name='author' label='Name'>
               <Input/>
             </Form.Item>
 
@@ -44,19 +49,19 @@ export default function addReview() {
             </Form.Item>
 
             <Form.Item name='program' label="Program">
-              <Input.TextArea />
+              <Input/>
             </Form.Item>
 
-            <Form.Item name='curriculum' label="Curriculum">
-              <Input.TextArea />
+            <Form.Item name='curriculum' label="Curriculum (1-5)">
+              <Input/>
             </Form.Item>
 
-            <Form.Item name= 'Instruction' label="Instruction">
-              <Input.TextArea />
+            <Form.Item name= 'Instruction' label="Instruction(1-5)">
+              <Input/>
             </Form.Item>
 
-            <Form.Item name='jobAssist' label="Job Assistance">
-              <Input.TextArea />
+            <Form.Item name='jobAssist' label="Job Assistance(1-5)">
+              <Input/>
             </Form.Item>
 
             <Form.Item name= 'overallExp'label="Over All Experience">
@@ -68,7 +73,7 @@ export default function addReview() {
                 offset: 8,
               }}
             >
-              <Button type="primary" htmlType="submit">
+              <Button onClick={()=>navigate('/')}type="primary" htmlType="submit" >
                 Submit
               </Button>
 

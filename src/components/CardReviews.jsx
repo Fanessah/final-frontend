@@ -9,14 +9,14 @@ export default function CardReviews({ review }) {
                 style={{
                     width: 240,
                 }}
-                cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}>
+                cover={<img alt="example" src={`https://source.unsplash.com/random?sig=${review._id}`} />}>
                 <div>
-                    <p>{review.author}</p>
-                    <p>{review.date}</p>
-                    <p>{review.curriculum}</p>
-                    <p>{review.instruction}</p>
-                    <p>{review.jobAssist}</p>
-                    <p>{review.overallExp}</p>
+                    <p> <b>Name:</b> {review.author} </p>
+                    <p> <b>Date:</b>{review.date}</p>
+                    <p><b>Curriculum:</b>{review.curriculum}</p>
+                    <p><b>Instruction:</b>{review.instruction}</p>
+                    <p><b>Career Services:</b>{review.jobAssist} </p>
+                    <p><b>Over All Experience:</b>{review.overallExp}</p>
 
                     
                 </div>
