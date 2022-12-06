@@ -7,7 +7,7 @@ export default function AddReview() {
 
     const navigate = useNavigate();
 
-    const onFinish = (index) => {
+    const handleSubmit = (index) => {
         console.log('success', index)
         fetch('https://deploy-final-proj.web.app/addreview', {
           method: 'POST',
@@ -16,14 +16,13 @@ export default function AddReview() {
              },
           body: JSON.stringify(index)
         })
-        .then(response => response.json())
-        .then(data => {
-          console.log(data)
-          console.log(index)
-          navigate('/')
-        })
-         .catch(console.error)
-      }
+        .then( () => navigate('/'))
+        
+        .catch(console.error)
+         
+        }
+         
+      
       const onFinishFailed = (errorInfo) => {
         console.log('failed', errorInfo)
       }
@@ -33,7 +32,7 @@ export default function AddReview() {
           
           <Form
           
-          onFinish={onFinish}
+          onFinish={handleSubmit}
           onFinishFailed={onFinishFailed}
           labelCol={{ span: 8 }}
           wrapperCol={{ span: 12 }}
@@ -73,7 +72,7 @@ export default function AddReview() {
                 offset: 8,
               }}
             >
-              <Button onClick={()=>navigate('/')}type="primary" htmlType="submit" >
+              <Button type="primary" htmlType="submit" >
                 Submit
               </Button>
 
