@@ -10,7 +10,7 @@ export default function CardReviews({ review }) {
                     width: 240,
                 }}
                 cover={<img alt="example" src={`https://source.unsplash.com/random?sig=${review._id}`} />}>
-                <div>
+                   
                     <p> <b>Name:</b> {review.author} </p>
                     <p> <b>Date:</b>{review.date}</p>
                     <p><b>Curriculum:</b>{review.curriculum}</p>
@@ -19,7 +19,7 @@ export default function CardReviews({ review }) {
                     <p><b>Over All Experience:</b>{review.overallExp}</p>
 
                     
-                </div>
+               
             </Card>
         </>
     )
