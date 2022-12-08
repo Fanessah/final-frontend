@@ -1,21 +1,32 @@
 .App {
+  height: 100vh;
+  width: 100vw;
   text-align: center;
+  background: lightblue;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
 }
 
+/* header{
+  border: 2px solid red ;
+  margin: calc(1em+1vw);
+
+} */
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #e8ecf4;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  
 }
-
-.App-link {
-  color: #61dafb;
+.review-list {
+  border:2px solid gold;
+  margin: calc(1em+1vw);
 }
-
-

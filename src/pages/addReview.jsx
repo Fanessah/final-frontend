@@ -39,23 +39,31 @@ export default function AddReview() {
           >
            
             <Form.Item
-              name='author' label='Name'>
+              name='author' label='Name'
+              rules={[{ required: true, message:'please enter name'}]}>
+                
               <Input/>
             </Form.Item>
 
-            <Form.Item name='date' label="Date">
+            <Form.Item name='date' label="Date"
+            rules={[{ required: true, message:'please enter date'}]}>
+            
               <Input />
             </Form.Item>
 
-            <Form.Item name='program' label="Program">
+            <Form.Item name='program' label="Program"
+            rules={[{ required: true, message:'please enter Program name'}]}
+            >
               <Input/>
             </Form.Item>
 
-            <Form.Item name='curriculum' label="Curriculum (1-5)">
+            <Form.Item name='curriculum' label="Curriculum (1-5)"
+            rules={[{ required: true, message:'please enter Curriculum'}]}
+            >y
               <Input/>
             </Form.Item>
 
-            <Form.Item name= 'Instruction' label="Instruction(1-5)">
+            <Form.Item name= 'instruction' label="Instruction(1-5)">
               <Input/>
             </Form.Item>
 

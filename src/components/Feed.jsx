@@ -16,11 +16,15 @@ export default function Feed() {
     console.log('----------->',reviewList)
 
     return (
-        <section>
+        ( 
+        
+        <section className= 'review-list'>
+            
             {reviewList.map((review, index) => {
                 return <CardReviews review={review} key={index} />
             })}
         </section>
+    )
     )
 }
 
