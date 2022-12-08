@@ -1,8 +1,13 @@
+
+
+
 .App {
   height: 100vh;
   width: 100vw;
   text-align: center;
-  background: lightblue;
+  /* background-color: lightblue; */
+  background: #82d1df;
+  background: radial-gradient(#82d1df, #8de3ba);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -29,4 +34,24 @@
 .review-list {
   border:2px solid gold;
   margin: calc(1em+1vw);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-container
+{
+  /* width: 240px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 16px;
+  /* margin-top: 8px; */
+  margin: 20px;
+}
+
+.form-container{
+
+  justify-content: center;
+  flex-wrap:wrap;
 }

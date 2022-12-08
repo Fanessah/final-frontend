@@ -1,30 +1,13 @@
 import React from 'react';
-import { Button, Space } from 'antd';
+import HomeHero from '../components/HomeHero';
 
 export default function Home() {
    
-    
+    <HomeHero/>
+
     return (
         
- 
-
-  <Space
-    direction="vertical"
-    style={{
-      width: '100%',
-    }}
-  >
-    <Button type="primary" block>
-      Write a Review
-    </Button>
-
-    <Button block> Read Reviews </Button>
-
-    <Button type="dashed" block>
-      Read Reviews
-    </Button>
-
-  </Space>
+<h1> Test </h1>
 )
 
     

@@ -1,16 +1,19 @@
-import { Card } from 'antd';
+import { Card} from 'antd';
 
 export default function CardReviews({ review }) {
 
     return (
         <>
+        <section className= 'card-container'>
+          
             <Card
+            
                 hoverable
                 style={{
                     width: 240,
                 }}
                 cover={<img alt="example" src={`https://source.unsplash.com/random?sig=${review._id}`} />}>
-                   
+                    
                     <p><b>Name:</b>{review.author}</p>
                     <p><b>Date:</b>{review.date}</p>
                     <p><b>Program:</b>{review.program}</p>
@@ -20,8 +23,11 @@ export default function CardReviews({ review }) {
                     <p><b>Over All Experience:</b>{review.overallExp}</p>
 
                     
-               
+                   
             </Card>
-        </>
+                  
+            </section>
+      </>
+      
     )
 }

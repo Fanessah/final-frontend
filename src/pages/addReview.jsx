@@ -26,12 +26,13 @@ export default function AddReview() {
       const onFinishFailed = (errorInfo) => {
         console.log('failed', errorInfo)
       }
-  
 
         return (
-          
+          <section className= 'form-container'>
+        
           <Form
           
+        
           onFinish={handleSubmit}
           onFinishFailed={onFinishFailed}
           labelCol={{ span: 8 }}
@@ -58,26 +59,31 @@ export default function AddReview() {
             </Form.Item>
 
             <Form.Item name='curriculum' label="Curriculum (1-5)"
-            rules={[{ required: true, message:'please enter Curriculum'}]}
-            >y
+            rules={[{ required: true, message:'please enter your rating of Curriculum'}]}
+            >
               <Input/>
             </Form.Item>
 
-            <Form.Item name= 'instruction' label="Instruction(1-5)">
+            <Form.Item name= 'instruction' label="Instruction(1-5)"
+            rules={[{ required: true, message:'please enter your rating of Instruction'}]}>
               <Input/>
             </Form.Item>
 
-            <Form.Item name='jobAssist' label="Job Assistance(1-5)">
+            <Form.Item name='jobAssist' label="Job Assistance(1-5)"
+            rules={[{ required: true, message:'please enter your rating of Job Assistance'}]}>
               <Input/>
             </Form.Item>
 
-            <Form.Item name= 'overallExp'label="Over All Experience">
+            <Form.Item name= 'overallExp'label="Over All Experience"
+                        rules={[{ required: true, message:'please enter your Over All Experience'}]}>
+            
               <Input.TextArea />
             </Form.Item>
 
             <Form.Item
               wrapperCol={{
                 offset: 8,
+                
               }}
             >
               <Button type="primary" htmlType="submit" >
@@ -86,6 +92,7 @@ export default function AddReview() {
 
             </Form.Item>
           </Form>
+          </section>
         );
       };
      

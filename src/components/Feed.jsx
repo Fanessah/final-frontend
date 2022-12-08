@@ -19,7 +19,7 @@ export default function Feed() {
         ( 
         
         <section className= 'review-list'>
-            
+
             {reviewList.map((review, index) => {
                 return <CardReviews review={review} key={index} />
             })}
