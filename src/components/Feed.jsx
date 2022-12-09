@@ -5,7 +5,6 @@ import CardReviews from "./CardReviews"
 export default function Feed() {
     const [reviewList, setReviewList] = useState([])
 
-
     useEffect(() => {
         fetch('https://deploy-final-proj.web.app/allreviews')
             .then(results => results.json())
@@ -13,7 +12,7 @@ export default function Feed() {
             .catch(err => console.error(err))
     }, [])
 
-    console.log('----------->',reviewList)
+    console.log('After useEffect----------->',reviewList)
 
     return (
         ( 

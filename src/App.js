@@ -6,24 +6,23 @@ import Footer from "./components/Footer";
 import AddReview from "./pages/AddReview";
 import Feed from "./components/Feed";
 import Home from "./pages/Home";
+
 import "./App.css";
-import HomeHero from "./components/HomeHero";
+// import HomeHero from "./components/HomeHero";
 
 function App() {
   return (
     <div className="App">
+      <div className="mainAppContainer">
       <Router>
         <Header />
-        <HomeHero/>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home/>} />
           <Route path="/allreviews" element={<Feed />} />
           <Route path="/addreview" element={<AddReview />} />
         </Routes>
-      
-    
       </Router>
-
+      </div>
       <Footer />
     </div>
   );

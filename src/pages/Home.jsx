@@ -1,15 +1,13 @@
 import React from 'react';
+import About from '../components/About'
 import HomeHero from '../components/HomeHero';
 
-export default function Home() {
-   
-    <HomeHero/>
-
+export default function  Home() {
     return (
-        
-<h1> Test </h1>
-)
-
-    
+        <>
+        <HomeHero />
+        <About/>
+        </>
+)   
 }
 
